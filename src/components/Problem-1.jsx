@@ -7,7 +7,6 @@ const Problem1 = () => {
     console.log(tasks);
 
     const handleSubmit = (e) => {
-
         e.preventDefault();
         const name = e.target[0].value;
         const status = e.target[1].value;
@@ -15,8 +14,6 @@ const Problem1 = () => {
         if (name && status) {
             const newTask = { name, status };
             setTasks([...tasks, newTask]);
-
-            // Clear the form fields
             e.target[0].value = '';
             e.target[1].value = '';
         }

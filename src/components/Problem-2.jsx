@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ModalA from './ModalA/ModalA';
 
 
 const Problem2 = () => {
@@ -62,7 +63,13 @@ const Problem2 = () => {
                 </div>
 
                 {/* Modal A */}
-                <div className="modal fade" id="modalA" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <ModalA
+                    contacts={contacts}
+                    showEvenOnly={showEvenOnly}
+                    toggleEvenFilter={toggleEvenFilter}
+                    getAllContact={getAllContact}
+                ></ModalA>
+                {/* <div className="modal fade" id="modalA" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
@@ -127,7 +134,7 @@ const Problem2 = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Modal B */}
                 <div className="modal fade" id="modalB" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
